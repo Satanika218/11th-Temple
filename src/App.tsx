@@ -45,6 +45,8 @@ const WebsiteAudit = lazy(() => import("./pages/WebsiteAudit"));
 const PDFTestAdmin = lazy(() => import("./pages/PDFTestAdmin"));
 const NewsletterAdmin = lazy(() => import("./pages/NewsletterAdmin"));
 const MassMailer = lazy(() => import("./pages/MassMailer"));
+const ResultsGallery = lazy(() => import("./pages/ResultsGallery"));
+const Pricing = lazy(() => import("./pages/Pricing"));
 
 const queryClient = new QueryClient();
 
@@ -91,6 +93,8 @@ const App = () => (
                <Route path="/admin/newsletter" element={<NewsletterAdmin />} />
             <Route path="/admin/mass-mailer" element={<MassMailer />} />
               <Route path="/case-studies" element={<CaseStudies />} />
+                 <Route path="/results-gallery" element={<ResultsGallery />} />
+                 <Route path="/pricing" element={<Pricing />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/consultation" element={<Consultation />} />
               <Route path="/privacy" element={<Privacy />} />
