@@ -150,19 +150,19 @@ const Index = () => {
                 We understand the unique challenges facing rural and border county businesses. Our AI automation and digital solutions help you save time, reduce costs, and compete with larger enterprises while maintaining your local advantage.
               </p>
 
-              {/* CTA Buttons - Desktop */}
-              <div className="flex flex-col sm:flex-row gap-4 mt-16 lg:mt-20 relative z-20">
-                <Link to="/free-tools" className="w-full sm:w-auto">
-                  <Button size="lg" className="w-full sm:w-auto bg-white text-brand-purple hover:bg-accent hover:text-brand-navy border-2 border-white font-semibold shadow-lg text-sm md:text-base px-4 md:px-6 py-3 min-h-[44px]">
-                    Try Free Tools
-                  </Button>
-                </Link>
-                <Link to="/consultation" className="w-full sm:w-auto">
-                  <Button size="lg" className="w-full sm:w-auto bg-brand-lime text-brand-navy hover:bg-brand-lime-dark font-semibold glow-effect animate-pulse-glow text-sm md:text-base px-4 md:px-6 py-3 min-h-[44px] whitespace-normal leading-tight">
-                    Free 30min Consultation - Let's Talk How We Help
-                  </Button>
-                </Link>
-              </div>
+                 {/* CTA Buttons - Desktop */}
+                 <div className="flex flex-col gap-4 mt-8 lg:mt-10 max-w-md">
+                   <Link to="/consultation" className="w-full">
+                     <Button size="lg" className="w-full bg-brand-lime text-brand-navy hover:bg-brand-lime-dark font-semibold glow-effect animate-pulse-glow text-sm md:text-base px-4 md:px-6 py-3 min-h-[44px] whitespace-normal leading-tight">
+                       Free 30min Consultation - Let's Talk How We Help
+                     </Button>
+                   </Link>
+                   <Link to="/free-tools" className="w-full">
+                     <Button size="lg" className="w-full bg-white text-brand-purple hover:bg-accent hover:text-brand-navy border-2 border-white font-semibold shadow-lg text-sm md:text-base px-4 md:px-6 py-3 min-h-[44px]">
+                       Try Free Tools
+                     </Button>
+                   </Link>
+                 </div>
             </div>
 
             {/* Right Column - Statistics */}
