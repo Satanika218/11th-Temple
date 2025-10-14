@@ -1,453 +1,92 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>11th Temple Solutions - Powering Community-Focused Growth with AI, Tech and Business Solutions</title>
-    <meta name="description" content="Serving the heart of Wales and the border counties - One community and every business counts. Professional AI automation, machine learning, and digital services for small businesses in Wales, Shropshire, and Herefordshire.">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <div class="logo-container">
-                    <img src="logo.png" alt="11th Temple Solutions" class="logo-image">
-                    <div class="logo-text">
-                        <h2>11th Temple Solutions</h2>
-                        <span class="tagline">Powering Community-Focused Growth</span>
-                    </div>
-                </div>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#tools">Free Tools</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#calendar">Calendar</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>11th Temple Solutions - AI Automation for Local Businesses</title>
+    <meta name="description" content="Powering Human Potential through AI automation solutions designed specifically for local businesses. We deliver local knowledge with global technology." />
+    <meta name="keywords" content="AI automation, local business, Wales, border counties, SME, digital transformation, process automation, SEO" />
+    <meta name="author" content="11th Temple Solutions" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://11thtemple.com" />
+    <link rel="icon" href="/lovable-uploads/dd8b5070-aff9-46a2-848d-770741ee222c.png" type="image/png">
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Powering Community-Focused Growth with AI, Tech and Business Solutions</h1>
-            <p class="hero-subtitle">Serving the heart of Wales and the border counties - One community and every business counts</p>
-            <p class="hero-description">We understand the unique challenges facing rural and border county businesses. Our AI automation and digital solutions help you save time, reduce costs, and compete with larger enterprises while maintaining your local advantage.</p>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">92.6%</span>
-                    <span class="stat-text">of Welsh SMEs haven't adopted AI yet</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">40%</span>
-                    <span class="stat-text">average time savings with our automation</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">£15k</span>
-                    <span class="stat-text">average annual cost savings</span>
-                </div>
-            </div>
-            <div class="hero-buttons">
-                <button class="btn-primary" onclick="openChatbot()">Get Free Consultation</button>
-                <button class="btn-secondary" onclick="scrollToSection('tools')">Try Free Tools</button>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="tech-animation">
-                <div class="floating-icon"><i class="fas fa-robot"></i></div>
-                <div class="floating-icon"><i class="fas fa-chart-line"></i></div>
-                <div class="floating-icon"><i class="fas fa-cogs"></i></div>
-                <div class="floating-icon"><i class="fas fa-brain"></i></div>
-            </div>
-        </div>
-    </section>
+    <meta property="og:title" content="11th Temple Solutions - AI Automation for Local Businesses" />
+    <meta property="og:description" content="Powering Human Potential through AI automation solutions designed specifically for local businesses." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/lovable-uploads/dd8b5070-aff9-46a2-848d-770741ee222c.png" />
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <p class="section-subtitle">Specialized solutions for rural and border county businesses</p>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>Process Automation</h3>
-                    <p>Streamline repetitive tasks, automate customer communications, and optimize workflows. Perfect for businesses with limited staff who need to maximize efficiency.</p>
-                    <ul>
-                        <li>Customer inquiry automation</li>
-                        <li>Invoice and payment processing</li>
-                        <li>Inventory management</li>
-                        <li>Social media scheduling</li>
-                    </ul>
-                </div>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@11thtemple" />
+    <meta name="twitter:image" content="/lovable-uploads/dd8b5070-aff9-46a2-848d-770741ee222c.png" />
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-search-location"></i>
-                    </div>
-                    <h3>Regional SEO & AI Marketing</h3>
-                    <p>Dominate local search results across Wales and border counties. Our AI-powered approach ensures you're found by customers in your area.</p>
-                    <ul>
-                        <li>Local SEO optimization</li>
-                        <li>Google My Business management</li>
-                        <li>Regional content creation</li>
-                        <li>AI-powered ad targeting</li>
-                    </ul>
-                </div>
+    <meta name="theme-color" content="#5e17eb" />
+    <meta name="msapplication-TileColor" content="#5e17eb" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    
+    <!-- DNS prefetch for performance -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/lovable-uploads/dd8b5070-aff9-46a2-848d-770741ee222c.png" as="image" />
+    
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "11th Temple Solutions",
+      "description": "AI automation solutions for local businesses in Wales and border counties",
+      "url": "https://11thtemple.com",
+      "logo": "/lovable-uploads/dd8b5070-aff9-46a2-848d-770741ee222c.png",
+      "image": "/lovable-uploads/dd8b5070-aff9-46a2-848d-770741ee222c.png",
+      "telephone": "+44-123-456-7890",
+      "email": "info@11thtemple.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Wales",
+        "addressCountry": "GB"
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Wales"
+        },
+        {
+          "@type": "Place", 
+          "name": "Herefordshire"
+        },
+        {
+          "@type": "Place",
+          "name": "Shropshire" 
+        },
+        {
+          "@type": "Place",
+          "name": "Gloucestershire"
+        }
+      ],
+      "serviceType": ["AI Automation", "Digital Transformation", "Process Automation", "SEO Services", "Digital Skills Training"],
+      "priceRange": "£",
+      "openingHours": "Mo-Fr 09:00-17:00"
+    }
+    </script>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Customer Insights & AI</h3>
-                    <p>Understand your customers better with AI-powered analytics. Make data-driven decisions that increase sales and customer satisfaction.</p>
-                    <ul>
-                        <li>Customer behavior analysis</li>
-                        <li>Predictive analytics</li>
-                        <li>Personalization engines</li>
-                        <li>Sales forecasting</li>
-                    </ul>
-                </div>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3>Smart Response Systems</h3>
-                    <p>Never miss a customer inquiry again. Our AI chatbots and automated response systems work 24/7 to capture leads and provide instant support.</p>
-                    <ul>
-                        <li>AI chatbot development</li>
-                        <li>Automated email responses</li>
-                        <li>Lead qualification systems</li>
-                        <li>Multi-channel integration</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3>Website & Logo Design</h3>
-                    <p>Professional, mobile-responsive websites and memorable logos that reflect your brand and convert visitors into customers.</p>
-                    <ul>
-                        <li>Custom website design</li>
-                        <li>Logo and brand identity</li>
-                        <li>E-commerce solutions</li>
-                        <li>Mobile optimization</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Website Renovations</h3>
-                    <p>Transform your outdated website into a modern, high-converting digital asset that works as hard as you do.</p>
-                    <ul>
-                        <li>Performance optimization</li>
-                        <li>Modern design updates</li>
-                        <li>SEO improvements</li>
-                        <li>Security enhancements</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Free Tools Section -->
-    <section id="tools" class="tools">
-        <div class="container">
-            <h2>Free Business Tools</h2>
-            <p class="section-subtitle">Professional-grade tools to help you assess and improve your digital presence</p>
-            
-            <div class="tools-grid">
-                <div class="tool-card">
-                    <div class="tool-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3>Website Audit Tool</h3>
-                    <p>Get a comprehensive analysis of your website's performance, SEO, and user experience.</p>
-                    <button class="btn-tool" onclick="openTool('website-audit')">Start Audit</button>
-                </div>
-
-                <div class="tool-card">
-                    <div class="tool-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3>SEO Audit Tool</h3>
-                    <p>Analyze your search engine optimization and get actionable recommendations. Export as PDF.</p>
-                    <button class="btn-tool" onclick="openTool('seo-audit')">Analyze SEO</button>
-                </div>
-
-                <div class="tool-card">
-                    <div class="tool-icon">
-                        <i class="fas fa-analytics"></i>
-                    </div>
-                    <h3>Analytics Audit Tool</h3>
-                    <p>Review your website analytics setup and discover optimization opportunities. Export as PDF.</p>
-                    <button class="btn-tool" onclick="openTool('analytics-audit')">Check Analytics</button>
-                </div>
-
-                <div class="tool-card">
-                    <div class="tool-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>GDPR Compliance Quiz</h3>
-                    <p>Test your knowledge of GDPR requirements. Challenging questions to ensure you're truly compliant.</p>
-                    <button class="btn-tool" onclick="openTool('gdpr-quiz')">Take Quiz</button>
-                </div>
-
-                <div class="tool-card">
-                    <div class="tool-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Digital Skills Quiz</h3>
-                    <p>Assess your digital marketing and technology skills. Identify areas for improvement.</p>
-                    <button class="btn-tool" onclick="openTool('digital-skills-quiz')">Test Skills</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Local Expertise, Global Technology</h2>
-                    <p>We understand the unique challenges facing businesses in Wales and the border counties. From the rural landscapes of Powys to the market towns of Shropshire and Herefordshire, we know that small businesses here face different challenges than their urban counterparts.</p>
-                    
-                    <p>While 92.6% of Welsh SMEs haven't yet adopted AI, we believe in incremental, practical implementation that makes sense for your business. We don't push unnecessary technology – we focus on solutions that solve real problems and deliver measurable results.</p>
-                    
-                    <p>Our approach recognizes the realities of rural business: limited budgets, small teams, and the need for every investment to show clear returns. We work with you to implement AI and automation gradually, ensuring each step adds value before moving to the next.</p>
-                    
-                    <div class="about-features">
-                        <div class="feature">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Deep understanding of Welsh and border county business dynamics</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-handshake"></i>
-                            <span>Incremental AI adoption that fits your pace and budget</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Focus on measurable ROI and practical solutions</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-users"></i>
-                            <span>Personal service with local knowledge and global expertise</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-visual">
-                    <div class="map-highlight">
-                        <h3>Serving</h3>
-                        <ul>
-                            <li><i class="fas fa-map-pin"></i> Wales (All Counties)</li>
-                            <li><i class="fas fa-map-pin"></i> Shropshire</li>
-                            <li><i class="fas fa-map-pin"></i> Herefordshire</li>
-                            <li><i class="fas fa-map-pin"></i> Border Communities</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2>What Our Clients Say</h2>
-            <p class="section-subtitle">Real results from real Welsh and border county businesses</p>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"The automation system saved us 15 hours per week on customer inquiries. Our response time went from hours to minutes, and customer satisfaction increased dramatically."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <strong>Sarah Williams</strong>
-                        <span>Farm Shop Owner, Powys</span>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"Their SEO work helped us dominate local search results. We're now the first result for 'accountants Shrewsbury' and our leads have tripled."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <strong>David Jones</strong>
-                        <span>Accounting Firm, Shropshire</span>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"The website renovation and chatbot implementation increased our online bookings by 200%. The investment paid for itself in three months."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <strong>Emma Thomas</strong>
-                        <span>B&B Owner, Herefordshire</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Calendar Section -->
-    <section id="calendar" class="calendar">
-        <div class="container">
-            <h2>Book Your Consultation</h2>
-            <p class="section-subtitle">Schedule a free consultation to discuss your business needs</p>
-            
-            <div class="calendar-container">
-                <div class="calendar-widget">
-                    <div class="calendar-header">
-                        <button id="prevMonth" class="calendar-nav">&lt;</button>
-                        <h3 id="currentMonth"></h3>
-                        <button id="nextMonth" class="calendar-nav">&gt;</button>
-                    </div>
-                    <div class="calendar-grid">
-                        <div class="calendar-days">
-                            <div class="day-header">Sun</div>
-                            <div class="day-header">Mon</div>
-                            <div class="day-header">Tue</div>
-                            <div class="day-header">Wed</div>
-                            <div class="day-header">Thu</div>
-                            <div class="day-header">Fri</div>
-                            <div class="day-header">Sat</div>
-                        </div>
-                        <div id="calendarDates" class="calendar-dates"></div>
-                    </div>
-                </div>
-                
-                <div class="time-slots">
-                    <h4>Available Times</h4>
-                    <div id="timeSlots" class="time-slot-grid">
-                        <p>Select a date to see available times</p>
-                    </div>
-                    <div class="booking-form" id="bookingForm" style="display: none;">
-                        <h4>Book Your Consultation</h4>
-                        <input type="text" id="clientName" placeholder="Your Name" required>
-                        <input type="email" id="clientEmail" placeholder="Your Email" required>
-                        <input type="text" id="clientBusiness" placeholder="Business Name">
-                        <textarea id="clientMessage" placeholder="Tell us about your needs..." rows="3"></textarea>
-                        <button onclick="confirmBooking()" class="btn-primary">Confirm Booking</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Ready to Transform Your Business?</h2>
-            <p class="section-subtitle">Get your free consultation and discover how AI automation can help your business</p>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>hello@11thtemple.solutions</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+44 (0) 1234 567890</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Serving Wales, Shropshire & Herefordshire</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <span>Mon-Fri: 9AM-6PM GMT</span>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="business" name="business" placeholder="Business Name">
-                        </div>
-                        <div class="form-group">
-                            <select id="location" name="location" required>
-                                <option value="">Select Your Location</option>
-                                <option value="wales">Wales</option>
-                                <option value="shropshire">Shropshire</option>
-                                <option value="herefordshire">Herefordshire</option>
-                                <option value="other">Other Border County</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Tell us about your business challenges..." rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary">Get Free Consultation</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Chatbot -->
-    <div id="chatbot" class="chatbot">
-        <div class="chatbot-header">
-            <h3>11th Temple Assistant</h3>
-            <button onclick="closeChatbot()" class="close-btn">&times;</button>
-        </div>
-        <div class="chatbot-messages" id="chatbot-messages">
-            <div class="message bot-message">
-                <p>Hi there! I'm your AI business consultant from 11th Temple Solutions. I help businesses identify areas where technology and automation can save time, reduce costs, and drive growth.</p>
-                <p>What brings you here today? Are you looking to solve a specific business challenge, or are you interested in exploring how technology might help your business run more smoothly?</p>
-                <p><strong>Please choose an option:</strong><br>
-                1. Solve a specific challenge<br>
-                2. Explore what's possible<br>
-                3. Other - Discuss problem now</p>
-            </div>
-        </div>
-        <div class="chatbot-input">
-            <input type="text" id="chatbot-input" placeholder="Type your message...">
-            <button onclick="sendMessage()">Send</button>
-        </div>
-    </div>
-
-    <!-- Tool Modals -->
-    <div id="tool-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div id="tool-content"></div>
-        </div>
-    </div>
-
-    <!-- Floating Chat Button -->
-    <button class="chat-float" onclick="openChatbot()">
-        <i class="fas fa-comments"></i>
-    </button>
-
-    <script src="script.js"></script>
-</body>
+  <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-lime text-brand-navy px-4 py-2 rounded-md z-50">Skip to main content</a>
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

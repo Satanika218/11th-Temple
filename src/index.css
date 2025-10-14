@@ -1,0 +1,728 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+    /* Screen reader only classes for accessibility */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    
+    .focus\\:not-sr-only:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      padding: inherit;
+      margin: inherit;
+      overflow: visible;
+      clip: auto;
+      white-space: normal;
+    }
+
+@layer base {
+  :root {
+    /* Primary Colors - 11th Temple Solutions Brand */
+    --primary-purple: 269 100% 50%; /* #5e17eb */
+    --primary-purple-dark: 269 91% 41%; /* #4a12c0 */
+    --primary-purple-light: 269 88% 60%; /* #7a3ef0 */
+    
+    /* Secondary Colors */
+    --accent-yellow: 45 100% 52%; /* #ffc107 */
+    --accent-orange: 36 100% 50%; /* #ff9800 */
+    
+    /* Neutral Colors */
+    --white: 0 0% 100%; /* #ffffff */
+    --light-gray: 210 17% 98%; /* #f8f9fa */
+    --medium-gray: 210 11% 93%; /* #e9ecef */
+    --dark-gray: 210 11% 25%; /* #343a40 */
+    --black: 210 11% 13%; /* #212529 */
+    
+    /* Design System Variables */
+    --background: var(--white);
+    --foreground: var(--black);
+
+    --card: var(--white);
+    --card-foreground: var(--black);
+
+    --popover: var(--white);
+    --popover-foreground: var(--black);
+
+    --primary: var(--primary-purple);
+    --primary-foreground: var(--white);
+
+    --secondary: var(--light-gray);
+    --secondary-foreground: var(--dark-gray);
+
+    --muted: var(--medium-gray);
+    --muted-foreground: var(--dark-gray);
+
+    --accent: var(--accent-yellow);
+    --accent-foreground: var(--primary-purple);
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: var(--white);
+
+    --border: var(--medium-gray);
+    --input: var(--medium-gray);
+    --ring: var(--primary-purple);
+
+    --radius: 0.5rem;
+
+    /* Sidebar Variables */
+    --sidebar-background: var(--primary-purple);
+    --sidebar-foreground: var(--white);
+    --sidebar-primary: var(--accent-yellow);
+    --sidebar-primary-foreground: var(--primary-purple);
+    --sidebar-accent: var(--light-gray);
+    --sidebar-accent-foreground: var(--dark-gray);
+    --sidebar-border: var(--medium-gray);
+    --sidebar-ring: var(--accent-yellow);
+
+    /* Gradient Definitions */
+    --purple-gradient: linear-gradient(135deg, hsl(var(--primary-purple)) 0%, hsl(var(--primary-purple-dark)) 100%);
+    --hero-gradient: linear-gradient(135deg, hsl(var(--primary-purple)) 0%, hsl(var(--primary-purple-light)) 50%, hsl(var(--primary-purple-dark)) 100%);
+  }
+
+  .dark {
+    --background: var(--black);
+    --foreground: var(--white);
+
+    --card: var(--dark-gray);
+    --card-foreground: var(--white);
+
+    --popover: var(--dark-gray);
+    --popover-foreground: var(--white);
+
+    --primary: var(--primary-purple-light);
+    --primary-foreground: var(--white);
+
+    --secondary: var(--dark-gray);
+    --secondary-foreground: var(--light-gray);
+
+    --muted: var(--dark-gray);
+    --muted-foreground: var(--medium-gray);
+
+    --accent: var(--accent-yellow);
+    --accent-foreground: var(--black);
+
+    --border: var(--dark-gray);
+    --input: var(--dark-gray);
+    --ring: var(--primary-purple-light);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    @apply text-foreground;
+  }
+
+  /* Typography Scale - 11th Temple Solutions */
+  h1 {
+    font-size: 2.5rem; /* 40px */
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 2rem; /* 32px */
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 1.5rem; /* 24px */
+    line-height: 1.4;
+  }
+
+  h4 {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.4;
+  }
+
+  h5 {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.4;
+  }
+
+  h6 {
+    font-size: 1rem; /* 16px */
+    line-height: 1.4;
+  }
+
+  p, li {
+    font-size: 1rem; /* 16px */
+    line-height: 1.6;
+  }
+
+  .stat-number {
+    font-size: 2.25rem; /* 36px */
+    font-weight: 700;
+  }
+
+  .testimonial-text {
+    font-size: 1.125rem; /* 18px */
+    font-style: italic;
+  }
+
+  /* Enhanced accessibility improvements */
+  *:focus {
+    outline: 2px solid #FCD34D;
+    outline-offset: 2px;
+  }
+
+  /* Skip link for screen readers */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #FCD34D;
+    color: #6B46C1;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 100;
+  }
+
+  .skip-link:focus {
+    top: 6px;
+  }
+
+  /* Ensure sufficient color contrast */
+  .text-brand-silver {
+    color: #E5E7EB;
+  }
+
+  /* Improve link visibility */
+  a {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.2s;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration-color: currentColor;
+  }
+
+  /* Ensure buttons are accessible */
+  button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  /* Improve form accessibility and brand consistency */
+  input:invalid {
+    border-color: #FCD34D !important; /* brand-lime */
+  }
+
+  input:focus:invalid {
+    border-color: #FCD34D !important;
+    box-shadow: 0 0 0 2px rgba(252, 211, 77, 0.2) !important;
+  }
+
+  /* Brand-consistent selection highlight */
+  ::selection {
+    background-color: #FCD34D; /* brand-lime */
+    color: #6B46C1; /* brand-navy */
+  }
+
+  ::-moz-selection {
+    background-color: #FCD34D;
+    color: #6B46C1;
+  }
+
+  /* Browser-specific fixes and compatibility */
+  @supports (-webkit-appearance: none) {
+    /* Safari-specific fixes */
+    input[type="text"], 
+    input[type="email"], 
+    input[type="tel"], 
+    textarea {
+      -webkit-appearance: none;
+      border-radius: 0.375rem;
+    }
+  }
+  
+  @supports (-moz-appearance: none) {
+    /* Firefox-specific fixes */
+    input[type="text"], 
+    input[type="email"], 
+    input[type="tel"], 
+    textarea {
+      -moz-appearance: none;
+    }
+  }
+  
+  /* Ensure high contrast mode compatibility */
+  @media (prefers-contrast: high) {
+    .bg-brand-navy {
+      background-color: #000000 !important;
+    }
+    .text-white {
+      color: #ffffff !important;
+    }
+    .text-brand-lime {
+      color: #ffff00 !important;
+    }
+  }
+  
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+    /* Focus states and keyboard accessibility */
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible,
+    select:focus-visible {
+      outline: 2px solid hsl(var(--accent));
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+    
+    /* Ensure minimum touch target sizes for all devices */
+    button,
+    a[role="button"],
+    input[type="button"],
+    input[type="submit"],
+    .mobile-touch-target {
+      min-height: 44px;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: rgba(252, 211, 77, 0.2);
+    }
+    
+    @media (pointer: coarse) {
+      button,
+      a[role="button"],
+      input[type="button"],
+      input[type="submit"] {
+        min-height: 48px;
+        padding: 12px 16px;
+      }
+    }
+    
+    /* iOS specific fixes */
+    @supports (-webkit-touch-callout: none) {
+      button,
+      input,
+      select,
+      textarea {
+        font-size: 16px !important; /* Prevents zoom on iOS */
+      }
+    }
+}
+
+@layer components {
+  /* 11th Temple Solutions Component Classes */
+  
+  /* Hero Section */
+  .hero {
+    background: var(--purple-gradient);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+
+  .hero h1 {
+    color: hsl(var(--white));
+    margin-bottom: 1.5rem;
+  }
+
+  .hero .highlight {
+    color: hsl(var(--accent-yellow));
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    color: hsl(var(--light-gray));
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    color: hsl(var(--light-gray));
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+  }
+
+  /* CTA Buttons */
+  .primary-cta {
+    background: hsl(var(--accent-yellow));
+    color: hsl(var(--primary-purple));
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .primary-cta:hover {
+    background: hsl(var(--accent-orange));
+    transform: translateY(-2px);
+  }
+
+  .secondary-cta {
+    background: transparent;
+    color: hsl(var(--white));
+    border: 2px solid hsl(var(--accent-yellow));
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .secondary-cta:hover {
+    background: hsl(var(--accent-yellow));
+    color: hsl(var(--primary-purple));
+  }
+
+  /* Service Cards */
+  .service-card {
+    background: hsl(var(--white));
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid hsl(var(--medium-gray));
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(94, 23, 235, 0.15);
+  }
+
+  .service-icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto 1.5rem;
+    color: hsl(var(--primary-purple));
+  }
+
+  /* Statistics Grid */
+  .stat-item {
+    text-align: center;
+    padding: 2rem;
+    background: hsl(var(--white));
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .stat-number {
+    color: hsl(var(--accent-yellow));
+    font-weight: 700;
+    font-size: 2.25rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-description {
+    color: hsl(var(--dark-gray));
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  /* Testimonial Cards */
+  .testimonial-card {
+    background: hsl(var(--white));
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+  }
+
+  .rating {
+    color: hsl(var(--accent-yellow));
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-text {
+    font-size: 1.125rem;
+    font-style: italic;
+    color: hsl(var(--dark-gray));
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .client-name {
+    font-weight: 600;
+    color: hsl(var(--primary-purple));
+  }
+
+  /* Gradient Text Effect */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--accent-yellow)), hsl(var(--accent-orange)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Purple Gradient Backgrounds */
+  .purple-gradient {
+    background: var(--purple-gradient);
+  }
+
+  /* Section Patterns */
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: hsl(var(--dark-gray));
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Enhanced accessibility classes */
+  .high-contrast {
+    filter: contrast(200%) brightness(150%) !important;
+  }
+
+  .high-contrast * {
+    border-color: #ffffff !important;
+    background: black !important;
+    color: white !important;
+  }
+
+  .high-contrast .bg-brand-navy {
+    background-color: #000000 !important;
+  }
+
+  .high-contrast .text-brand-silver {
+    color: #ffffff !important;
+  }
+
+  .high-contrast .text-brand-lime {
+    color: #ffff00 !important;
+  }
+
+  .high-contrast .border-brand-silver\/20 {
+    border-color: #ffffff !important;
+  }
+
+  /* Screen reader only content */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* GDPR compliance styling */
+  .gdpr-notice {
+    font-size: 0.75rem;
+    color: #E5E7EB;
+    line-height: 1.4;
+  }
+
+  .gdpr-notice a {
+    color: #FCD34D;
+    text-decoration: underline;
+  }
+
+  .gdpr-notice a:hover {
+    color: #F59E0B;
+  }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast media query */
+@media (prefers-contrast: high) {
+  :root {
+    --background: 0 0 0;
+    --foreground: 255 255 255;
+  }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  /* Ensure minimum touch target size for mobile devices */
+  button, 
+  a[role="button"], 
+  input[type="submit"], 
+  input[type="button"],
+  [role="button"],
+  .mobile-touch-target {
+    min-height: 48px;
+    min-width: 48px;
+    padding: 12px 16px;
+    touch-action: manipulation;
+  }
+  
+  /* Mobile navigation improvements */
+  .mobile-nav-item {
+    padding: 16px 20px !important;
+    font-size: 16px !important;
+    line-height: 1.4;
+    word-wrap: break-word;
+  }
+  
+  /* Better mobile spacing */
+  .mobile-section {
+    padding: 24px 16px;
+  }
+  
+  /* Mobile-friendly dropdowns */
+  .mobile-dropdown {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Prevent horizontal scroll on mobile */
+  body {
+    overflow-x: hidden;
+  }
+  
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  /* Prevent text overflow */
+  * {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  /* Mobile form improvements */
+  input, textarea, select {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    padding: 12px 16px;
+    min-height: 48px;
+  }
+  
+  /* Mobile button improvements */
+  .mobile-cta {
+    width: 100% !important;
+    padding: 14px 20px !important;
+    font-size: 16px !important;
+    font-weight: 600;
+    min-height: 48px;
+    white-space: normal !important;
+    line-height: 1.3;
+  }
+  
+  /* Typography adjustments for mobile */
+  h1 {
+    font-size: 1.75rem !important; /* 28px */
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important; /* 24px */
+    line-height: 1.3;
+  }
+  
+  h3 {
+    font-size: 1.25rem !important; /* 20px */
+    line-height: 1.4;
+  }
+  
+  /* Ensure cards and containers don't overflow */
+  .container, .max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .touch-friendly {
+    min-height: 40px;
+    padding: 10px 14px;
+  }
+}
+
+/* Mobile landscape optimizations */
+@media (max-width: 896px) and (orientation: landscape) {
+  .mobile-landscape-adjust {
+    padding: 8px 12px;
+  }
+  
+  .hero-mobile-landscape {
+    min-height: 70vh;
+  }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .ios-safe-area {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  /* Fix iOS Safari 100vh issue */
+  .mobile-full-height {
+    height: -webkit-fill-available;
+  }
+}
+
+/* Print styles for accessibility */
+@media print {
+  .accessibility-toolbar {
+    display: none !important;
+  }
+  
+  * {
+    background: white !important;
+    color: black !important;
+  }
+}

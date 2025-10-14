@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Allow search engines to crawl all pages
+Sitemap: https://11thtemple.com/sitemap.xml
+
+# Block access to admin and private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.well-known/
+
+# Allow access to important pages
+Allow: /services/
+Allow: /about/
+Allow: /contact/
+Allow: /blog/
+Allow: /free-tools/
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
