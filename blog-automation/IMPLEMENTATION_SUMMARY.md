@@ -120,7 +120,7 @@ python blog_automation.py --audit-only
 ```bash
 python blog_automation.py --generate-limit 3
 ```
-- Uses OpenAI GPT-4 or GPT-3.5-Turbo
+- Uses OpenAI GPT-4o-mini (recommended), GPT-4o, or GPT-3.5-Turbo
 - Generates 400-600 word posts
 - Rotates through 6 topic categories
 - Includes regional focus and examples
@@ -183,25 +183,36 @@ blog-automation/
 
 ### OpenAI API Costs
 
-**GPT-3.5-Turbo** (Recommended for testing):
+**GPT-4o-mini** (RECOMMENDED - Default):
+- Cost per post: ~$0.0004
+- Monthly (4 posts): ~$0.002
+- Annual (52 posts): ~$0.02
+- Quality: Excellent for blog content
+- Speed: Very fast
+
+**GPT-4o** (Premium option):
+- Cost per post: ~$0.007
+- Monthly (4 posts): ~$0.03
+- Annual (52 posts): ~$0.38
+- Quality: Highest quality
+- Speed: Fast
+
+**GPT-3.5-Turbo** (Budget option):
 - Cost per post: ~$0.002
 - Monthly (4 posts): ~$0.01
 - Annual (52 posts): ~$0.10
+- Quality: Good for basic content
+- Speed: Very fast
 
-**GPT-4** (Recommended for production):
-- Cost per post: ~$0.03
-- Monthly (4 posts): ~$0.12
-- Annual (52 posts): ~$1.56
-
-**Recommendation**: Start with GPT-3.5-Turbo for testing, switch to GPT-4 for production quality.
+**Recommendation**: Use GPT-4o-mini (default) for the best balance of quality and cost. It provides excellent results at just $0.02/year.
 
 ### Total Cost of Ownership
-- **API Costs**: $0.10 - $1.56/year
+- **API Costs**: $0.02 - $0.38/year (GPT-4o-mini to GPT-4o)
 - **GitHub Actions**: Free (included in GitHub)
 - **Development Time**: Zero (fully automated)
 - **Maintenance**: ~15 minutes/month
 
-**ROI**: Compared to manual blog writing (2-3 hours/week), this saves ~100+ hours/year.
+**ROI**: Compared to manual blog writing (2-3 hours/week), this saves ~100+ hours/year at a cost of just $0.02/year with GPT-4o-mini.
 
 ## 🔒 Security Features
 

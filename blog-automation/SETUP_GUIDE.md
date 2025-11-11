@@ -47,9 +47,10 @@ If you need to install Python:
 6. **Important**: Save this key securely - you won't be able to see it again!
 
 **Cost Note**: 
+- GPT-4o-mini: ~$0.0004 per blog post (RECOMMENDED)
+- GPT-4o: ~$0.007 per blog post
 - GPT-3.5-Turbo: ~$0.002 per blog post
-- GPT-4: ~$0.03 per blog post
-- Recommended: Start with GPT-3.5-Turbo for testing
+- Recommended: Use GPT-4o-mini for best quality/cost balance
 
 ### Step 2: Install Python Dependencies
 
@@ -423,9 +424,16 @@ mkdir -p blog-automation/logs
 
 **Solutions**:
 
-1. **Use GPT-4 instead of GPT-3.5**:
+1. **Change AI Model**:
    ```env
-   OPENAI_MODEL=gpt-4
+   # Default (recommended)
+   OPENAI_MODEL=gpt-4o-mini
+   
+   # Or use premium model
+   OPENAI_MODEL=gpt-4o
+   
+   # Or use budget model
+   OPENAI_MODEL=gpt-3.5-turbo
    ```
 
 2. **Adjust temperature**:

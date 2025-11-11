@@ -62,7 +62,10 @@ class Config:
     
     # API Configuration
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
-    OPENAI_MODEL = "gpt-4"  # or "gpt-3.5-turbo" for lower cost
+    OPENAI_MODEL = "gpt-4o-mini"  # Best value: high quality, very low cost (~$0.02/year)
+    # Alternative options:
+    # "gpt-4o" - Highest quality (~$0.38/year)
+    # "gpt-3.5-turbo" - Budget option (~$0.10/year)
     OPENAI_TEMPERATURE = 0.7
     
     # Topic Configuration

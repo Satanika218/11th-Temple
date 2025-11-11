@@ -7,7 +7,7 @@ This automated blog management system ensures your website publishes high-qualit
 ## Features
 
 - **Automated Auditing**: Scans existing blog posts and identifies missing Sundays
-- **AI Content Generation**: Creates 400-600 word blog posts using OpenAI GPT-4
+- **AI Content Generation**: Creates 400-600 word blog posts using OpenAI GPT-4o-mini
 - **Topic Rotation**: Automatically rotates through 6 key topic areas
 - **Regional Focus**: Content tailored for Powys, Shropshire, Wales, and Herefordshire
 - **TypeScript Integration**: Generates properly formatted TSX files for your React app
@@ -245,7 +245,7 @@ blog-automation/
 ### How It Works
 
 1. **Topic Selection**: The system rotates through 6 predefined topics based on the week number
-2. **AI Generation**: Uses OpenAI GPT-4 to create content following your style guide
+2. **AI Generation**: Uses OpenAI GPT-4o-mini to create content following your style guide
 3. **Format Conversion**: Converts markdown to JSX format for React
 4. **File Creation**: Generates properly formatted TSX files
 5. **Data Update**: Updates the blog data file with new post metadata
@@ -349,16 +349,15 @@ git config user.name "Blog Automation"
 
 ### OpenAI API Costs
 
-- **GPT-4**: ~$0.03 per post (600 words)
+- **GPT-4o-mini**: ~$0.0004 per post (600 words) - **RECOMMENDED**
+- **GPT-4o**: ~$0.007 per post (600 words)
 - **GPT-3.5-Turbo**: ~$0.002 per post (600 words)
 
-**Monthly Cost** (4 posts/month):
-- GPT-4: ~$0.12/month
-- GPT-3.5-Turbo: ~$0.01/month
+- **GPT-4o-mini**: ~$0.02/year (BEST VALUE)
+- **GPT-4o**: ~$0.38/year
+- **GPT-3.5-Turbo**: ~$0.10/year
 
-**Annual Cost** (52 posts/year):
-- GPT-4: ~$1.56/year
-- GPT-3.5-Turbo: ~$0.10/year
+**Recommendation**: Use GPT-4o-mini for the best balance of quality and cost
 
 💡 **Tip**: Start with GPT-3.5-Turbo for testing, upgrade to GPT-4 for production.
 
