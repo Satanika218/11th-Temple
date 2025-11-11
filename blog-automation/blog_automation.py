@@ -34,10 +34,14 @@ try:
     import openai
     from jinja2 import Template
     import yaml
+    from dotenv import load_dotenv
 except ImportError as e:
     print(f"Missing required package: {e}")
     print("Install requirements: pip install -r requirements.txt")
     sys.exit(1)
+
+# Load environment variables from .env file
+load_dotenv()
 
 # ============================================================================
 # CONFIGURATION
@@ -355,7 +359,7 @@ class ContentGenerator:
             
             logger.info(f"Generating content with OpenAI for topic: {topic}")
             
-            response = self.client.ChatCompletion.create(
+            response = self.client.chat.completions.create(
                 model=Config.OPENAI_MODEL,
                 messages=[
                     {"role": "system", "content": self._get_system_prompt()},
